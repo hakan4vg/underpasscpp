@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(underpass main.cpp
         helloworld.cpp
-        helloworld.h)
+        helloworld.h
+        basiccalculator.cpp
+        basiccalculator.h)
