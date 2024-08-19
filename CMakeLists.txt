@@ -7,4 +7,7 @@ add_executable(underpass main.cpp
         helloworld.cpp
         helloworld.h
         basiccalculator.cpp
-        basiccalculator.h)
+        basiccalculator.h
+        fileio.cpp
+        fileio.h
+        guessinggame.cpp)

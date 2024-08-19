@@ -1,6 +1,7 @@
 #include <iostream>
 #include "helloworld.h"
 #include "basiccalculator.h"
+#include "fileio.h"
 #include "guessinggame.h"
 int main()
 {
@@ -15,7 +16,7 @@ int main()
 
     while (true)
     {
-        std::cout << "1. Basic Calculator, 2. Guessing Game, 3. Stop" << std::endl;
+        std::cout << "1. Basic Calculator, 2. Guessing Game, 3. File contents, 4. Stop" << std::endl;
         std::cin >> selection;
 
         switch (selection)
@@ -83,6 +84,9 @@ int main()
             guessinggame();
             break;
         case 3:
+            readFile();
+            break;
+        case 4:
             return 0;
         default:
             std::cout << "Invalid selection" << std::endl;
