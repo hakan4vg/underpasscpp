@@ -38,3 +38,40 @@ void readFile()
 
 
 }
+
+
+std::ofstream createFile(const std::string& path) {
+    std::ofstream file(path);
+    if (!file.is_open()) {
+        std::cerr << "File could not be created" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+    return file;
+}
+
+std::string readMessage() {
+    std::string message;
+    std::cout << "Enter the message to write to the file: ";
+    std::getline(std::cin, message);
+    return message;
+}
+
+void writeFile() {
+    std::string path;
+    std::cout << "Enter the file path: ";
+    std::getline(std::cin, path);
+
+    std::ofstream file(path, std::ios::app);
+    if (!file.is_open()) {
+        std::cerr << "File could not be opened" << std::endl;
+        return;
+    }
+
+    std::string message = readMessage();
+    file << message;
+    if (file.fail()) {
+        std::cerr << "File could not be written" << std::endl;
+    } else {
+        std::cout << "File written successfully" << std::endl;
+    }
+}

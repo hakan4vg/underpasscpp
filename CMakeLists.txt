@@ -10,4 +10,6 @@ add_executable(underpass main.cpp
         basiccalculator.h
         fileio.cpp
         fileio.h
-        guessinggame.cpp)
+        guessinggame.cpp
+        menu.cpp
+        menu.h)
