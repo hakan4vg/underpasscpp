@@ -6,5 +6,6 @@
 #define FILEIO_H
 
 void readFile();
+void writeFile();
 
 #endif //FILEIO_H
